@@ -1,25 +1,24 @@
-Portfolio - Jordi van Sighem
+# Portfolio - Jordi van Sighem
 
 ## About
-This repository contains my SQL and Python projects and analyses. 
-I use SQL and python to explore datasets, identify patterns, visualize and extract insights.
+This repository contains my SQL and Python projects and analyses.
+I use SQL and Python to explore datasets, identify patterns, visualize and extract insights.
 
 ## Projects
+
+### SQL
+
 | Project | Dataset | Description |
+|---|---|---|
+| [Bank Churners Analysis](SQL/bankchurners%20analysis) | Kaggle - Bank Churners | Customer churn analysis |
+| [E-commerce Online Retail](SQL/E-Commerce%20online%20retail) | Kaggle - E-commerce Online Retail | Retail analysis |
+| [HR Employee Attrition](SQL/HR%20employment%20analysis) | Kaggle - IBM HR Analytics Employee Attrition | Employee analysis |
 
-SQL: 
-|---------|---------|-------------|
-| Bank Churners Analysis | Kaggle - Bank Churners | Customer churn analysis |
-| E-commerce online retail | Kaggle e-commerce_online_retail | Retail analysis | 
-| HR Employee Attrition | Kaggle - IBM HR Analytics Employee Attrition | Employee analysis | 
+### Python
 
-Python: 
-|---------|---------|-------------|
-| E-commerce analysis | 
-    | ecommerce_sales_customer_analytics_150k.csv | 1 row per order | 138,116 |
-    | order_items.csv | 1 row per order line | 397,569 |
-    | customer_master.csv | 1 row per customer | 25,000 |
-    | product_catalog.csv | 1 row per product | 1,175 |
+| Project | Dataset | Description |
+|---|---|---|
+| [E-commerce Sales & Customer Analytics](Python/ecommerce.ipynb) | Custom e-commerce dataset (138k orders, 397k order lines, 25k customers, 1.1k products) | Exploratory analysis of revenue, profit margin, discounting and customer satisfaction |
 
 ## Skills
 - Aggregations (SUM, AVG, COUNT, MIN, MAX)
@@ -28,6 +27,7 @@ Python:
 - Subqueries
 - CASE WHEN
 - Date functions (strftime)
+- Python/pandas: groupby & aggregation, merging, datetime resampling, pivot tables, correlation, custom functions with `.apply()`
 
 ## Contact
 - 📧 jvsighem@gmail.com
