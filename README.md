@@ -20,14 +20,6 @@ I use SQL and Python to explore datasets, identify patterns, visualize and extra
 |---|---|---|
 | [E-commerce Sales & Customer Analytics](Python/ecommerce.ipynb) | Custom e-commerce dataset (138k orders, 397k order lines, 25k customers, 1.1k products) | Exploratory analysis of revenue, profit margin, discounting and customer satisfaction |
 
-## Skills
-- Aggregations (SUM, AVG, COUNT, MIN, MAX)
-- Filtering (WHERE, HAVING)
-- Grouping (GROUP BY)
-- Subqueries
-- CASE WHEN
-- Date functions (strftime)
-- Python/pandas: groupby & aggregation, merging, datetime resampling, pivot tables, correlation, custom functions with `.apply()`
 
 ## Contact
 - 📧 jvsighem@gmail.com
