@@ -49,6 +49,10 @@ Full analysis, code and charts are in the notebook.
 Synthetic e-commerce dataset used for portfolio/learning purposes — 7 countries, 4 sales channels,
 15 product categories.
 
+> **Note:** the raw CSV files are not included in this repository — the two largest ones (48MB and
+> 37MB) are above GitHub's file upload limit. The notebook below is fully executed with all outputs,
+> tables and charts preserved, so it can be read and reviewed end-to-end without rerunning it.
+
 ## Approach
 
 - **Exploration:** initial inspection of structure, dtypes and summary statistics.
@@ -60,16 +64,16 @@ Synthetic e-commerce dataset used for portfolio/learning purposes — 7 countrie
 ## Repo structure
 
 ```
-ecommerce-analytics/
-├── ecommerce.ipynb                          # full analysis, executed with outputs
-├── README.md
-├── ecommerce_sales_customer_analytics_150k.csv
-├── order_items.csv
-├── customer_master.csv
-└── product_catalog.csv
+Python/
+├── ecommerce.ipynb          # full analysis, executed with outputs
+└── ecommerce_README.md
 ```
 
 ## How to run
+
+The raw data files aren't in the repo (see note above), so the notebook can't be re-executed as-is.
+To run it yourself, place the four CSV files listed under **Data** in the same folder as the
+notebook, then:
 
 ```bash
 pip install pandas matplotlib jupyter
