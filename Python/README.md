@@ -66,7 +66,7 @@ Synthetic e-commerce dataset used for portfolio/learning purposes — 7 countrie
 ```
 Python/
 ├── ecommerce.ipynb          # full analysis, executed with outputs
-└── ecommerce_README.md
+└── README.md
 ```
 
 ## How to run
