@@ -7802,7 +7802,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="E-commerce-Sales-&amp;-Customer-Analytics-%E2%80%94-Exploratory-Analysis">E-commerce Sales &amp; Customer Analytics — Exploratory Analysis<a class="anchor-link" href="#E-commerce-Sales-&amp;-Customer-Analytics-%E2%80%94-Exploratory-Analysis">¶</a></h1><p>Verkennende analyse van een e-commerce dataset (150k transacties, 7 landen, meerdere sales channels en klantsegmenten). Doel: inzicht krijgen in omzet, winstmarge, kortingsgedrag en klanttevredenheid met pandas — groeperingen, merges, tijdreeksanalyse en visualisaties.</p>
+<h1 id="E-commerce-Sales-&amp;-Customer-Analytics-%E2%80%94-Exploratory-Analysis">E-commerce Sales &amp; Customer Analytics — Exploratory Analysis<a class="anchor-link" href="#E-commerce-Sales-&amp;-Customer-Analytics-%E2%80%94-Exploratory-Analysis">¶</a></h1><p>Exploratory analysis of an e-commerce dataset (150k transactions, 7 countries, multiple sales channels and customer segments). Goal: gain insight into revenue, profit margin, discount behavior and customer satisfaction using pandas — grouping, merging, time series analysis and visualizations.</p>
 <p><strong>Data:</strong> <code>ecommerce_sales_customer_analytics_150k.csv</code>, <code>order_items.csv</code>, <code>customer_master.csv</code>, <code>product_catalog.csv</code></p>
 </div>
 </div>
@@ -7814,7 +7814,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Data-laden-en-verkennen">Data laden en verkennen<a class="anchor-link" href="#Data-laden-en-verkennen">¶</a></h2>
+<h2 id="Loading-and-exploring-the-data">Loading and exploring the data<a class="anchor-link" href="#Loading-and-exploring-the-data">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8269,7 +8269,7 @@ memory usage: 36.4 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Hoeveel-unieke-klanten-(customer_id)-staan-er-in-de-dataset,-en-hoeveel-unieke-landen?">1. Hoeveel unieke klanten (customer_id) staan er in de dataset, en hoeveel unieke landen?<a class="anchor-link" href="#1.-Hoeveel-unieke-klanten-(customer_id)-staan-er-in-de-dataset,-en-hoeveel-unieke-landen?">¶</a></h2>
+<h2 id="1.-How-many-unique-customers-(customer_id)-are-in-the-dataset,-and-how-many-unique-countries?">1. How many unique customers (customer_id) are in the dataset, and how many unique countries?<a class="anchor-link" href="#1.-How-many-unique-customers-(customer_id)-are-in-the-dataset,-and-how-many-unique-countries?">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8281,7 +8281,7 @@ memory usage: 36.4 MB
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Unieke klanten</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Unique customers</span>
 <span class="n">customermaster</span><span class="p">[</span><span class="s1">'customer_id'</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -8308,7 +8308,7 @@ memory usage: 36.4 MB
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Unieke landen </span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Unique countries </span>
 <span class="n">customermaster</span><span class="p">[</span><span class="s1">'customer_country'</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -8334,7 +8334,7 @@ memory usage: 36.4 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="2.-Filter-alle-order_items-met-order_status-==-%22Completed%22-en-bereken-de-gemiddelde-net_sales.">2. Filter alle order_items met order_status == "Completed" en bereken de gemiddelde net_sales.<a class="anchor-link" href="#2.-Filter-alle-order_items-met-order_status-==-%22Completed%22-en-bereken-de-gemiddelde-net_sales.">¶</a></h2>
+<h2 id="2.-Filter-all-order_items-with-order_status-==-%22Completed%22-and-calculate-the-average-net_sales.">2. Filter all order_items with order_status == "Completed" and calculate the average net_sales.<a class="anchor-link" href="#2.-Filter-all-order_items-with-order_status-==-%22Completed%22-and-calculate-the-average-net_sales.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8793,7 +8793,7 @@ memory usage: 36.4 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="3.-Maak-een-nieuwe-kolom-order_date-van-het-type-datetime,-en-print-de-vroegste-en-laatste-orderdatum.">3. Maak een nieuwe kolom order_date van het type datetime, en print de vroegste en laatste orderdatum.<a class="anchor-link" href="#3.-Maak-een-nieuwe-kolom-order_date-van-het-type-datetime,-en-print-de-vroegste-en-laatste-orderdatum.">¶</a></h2>
+<h2 id="3.-Create-a-new-order_date-column-of-type-datetime,-and-print-the-earliest-and-latest-order-date.">3. Create a new order_date column of type datetime, and print the earliest and latest order date.<a class="anchor-link" href="#3.-Create-a-new-order_date-column-of-type-datetime,-and-print-the-earliest-and-latest-order-date.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8942,7 +8942,7 @@ dtype: object</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="4.-Groepeer-op-customer_segment-en-bereken-per-segment:-aantal-order_items,-totale-omzet-(net_sales)-en-gemiddelde-profit_margin_percentage.-Sorteer-op-omzet,-aflope">4. Groepeer op customer_segment en bereken per segment: aantal order_items, totale omzet (net_sales) en gemiddelde profit_margin_percentage. Sorteer op omzet, aflope<a class="anchor-link" href="#4.-Groepeer-op-customer_segment-en-bereken-per-segment:-aantal-order_items,-totale-omzet-(net_sales)-en-gemiddelde-profit_margin_percentage.-Sorteer-op-omzet,-aflope">¶</a></h2>
+<h2 id="4.-Group-by-customer_segment-and-calculate-per-segment:-number-of-order_items,-total-revenue-(net_sales)-and-average-profit_margin_percentage.-Sort-by-revenue,-descending.">4. Group by customer_segment and calculate per segment: number of order_items, total revenue (net_sales) and average profit_margin_percentage. Sort by revenue, descending.<a class="anchor-link" href="#4.-Group-by-customer_segment-and-calculate-per-segment:-number-of-order_items,-total-revenue-(net_sales)-and-average-profit_margin_percentage.-Sort-by-revenue,-descending.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9040,7 +9040,7 @@ dtype: object</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="5.-Voeg-order_items.csv-samen-met-product_catalog.csv-op-product_id,-en-bepaal-welke-product_category-het-hoogste-totale-profit-oplevert.">5. Voeg order_items.csv samen met product_catalog.csv op product_id, en bepaal welke product_category het hoogste totale profit oplevert.<a class="anchor-link" href="#5.-Voeg-order_items.csv-samen-met-product_catalog.csv-op-product_id,-en-bepaal-welke-product_category-het-hoogste-totale-profit-oplevert.">¶</a></h2>
+<h2 id="5.-Merge-order_items.csv-with-product_catalog.csv-on-product_id,-and-determine-which-product_category-generates-the-highest-total-profit.">5. Merge order_items.csv with product_catalog.csv on product_id, and determine which product_category generates the highest total profit.<a class="anchor-link" href="#5.-Merge-order_items.csv-with-product_catalog.csv-on-product_id,-and-determine-which-product_category-generates-the-highest-total-profit.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9222,7 +9222,7 @@ memory usage: 60.7 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="6.-Resample-de-order_items-per-maand-(order_date)-en-plot-de-omzet-per-maand-als-lijngrafiek.">6. Resample de order_items per maand (order_date) en plot de omzet per maand als lijngrafiek.<a class="anchor-link" href="#6.-Resample-de-order_items-per-maand-(order_date)-en-plot-de-omzet-per-maand-als-lijngrafiek.">¶</a></h2>
+<h2 id="6.-Resample-order_items-by-month-(order_date)-and-plot-revenue-per-month-as-a-line-chart.">6. Resample order_items by month (order_date) and plot revenue per month as a line chart.<a class="anchor-link" href="#6.-Resample-order_items-by-month-(order_date)-and-plot-revenue-per-month-as-a-line-chart.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9235,8 +9235,8 @@ memory usage: 60.7 MB
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">order_items_date</span> <span class="o">=</span> <span class="n">ecommerce</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'order_date'</span><span class="p">)</span>
-<span class="n">maandelijks</span> <span class="o">=</span> <span class="n">order_items_date</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'MS'</span><span class="p">)[</span><span class="s1">'net_sales'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> 
-<span class="n">maandelijks</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Monthly net sales'</span><span class="p">)</span>
+<span class="n">monthly</span> <span class="o">=</span> <span class="n">order_items_date</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'MS'</span><span class="p">)[</span><span class="s1">'net_sales'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> 
+<span class="n">monthly</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Monthly net sales'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -9262,7 +9262,7 @@ memory usage: 60.7 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="7.-Groepeer-op-customer_country-en-bereken-per-land-het-aantal-order_items-en-de-gemiddelde-customer_rating">7. Groepeer op customer_country en bereken per land het aantal order_items en de gemiddelde customer_rating<a class="anchor-link" href="#7.-Groepeer-op-customer_country-en-bereken-per-land-het-aantal-order_items-en-de-gemiddelde-customer_rating">¶</a></h2>
+<h2 id="7.-Group-by-customer_country-and-calculate-the-number-of-order_items-and-average-customer_rating-per-country.">7. Group by customer_country and calculate the number of order_items and average customer_rating per country.<a class="anchor-link" href="#7.-Group-by-customer_country-and-calculate-the-number-of-order_items-and-average-customer_rating-per-country.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9558,7 +9558,7 @@ memory usage: 60.7 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="8.-Groepeer-op-zowel-customer_segment-als-sales_channel-en-bereken-per-combinatie-de-totale-net_sales.">8. Groepeer op zowel customer_segment als sales_channel en bereken per combinatie de totale net_sales.<a class="anchor-link" href="#8.-Groepeer-op-zowel-customer_segment-als-sales_channel-en-bereken-per-combinatie-de-totale-net_sales.">¶</a></h2>
+<h2 id="8.-Group-by-both-customer_segment-and-sales_channel-and-calculate-total-net_sales-per-combination.">8. Group by both customer_segment and sales_channel and calculate total net_sales per combination.<a class="anchor-link" href="#8.-Group-by-both-customer_segment-and-sales_channel-and-calculate-total-net_sales-per-combination.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9696,7 +9696,7 @@ memory usage: 60.7 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="9.-Zet-die-combinatie-om-in-een-overzichtelijkere-tabel.">9. Zet die combinatie om in een overzichtelijkere tabel.<a class="anchor-link" href="#9.-Zet-die-combinatie-om-in-een-overzichtelijkere-tabel.">¶</a></h2>
+<h2 id="9.-Turn-that-combination-into-a-clearer-table.">9. Turn that combination into a clearer table.<a class="anchor-link" href="#9.-Turn-that-combination-into-a-clearer-table.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9795,7 +9795,7 @@ memory usage: 60.7 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="10.-Is-er-een-verband-tussen-customer_rating-en-profit_margin_percentage?">10. Is er een verband tussen customer_rating en profit_margin_percentage?<a class="anchor-link" href="#10.-Is-er-een-verband-tussen-customer_rating-en-profit_margin_percentage?">¶</a></h2>
+<h2 id="10.-Is-there-a-relationship-between-customer_rating-and-profit_margin_percentage?">10. Is there a relationship between customer_rating and profit_margin_percentage?<a class="anchor-link" href="#10.-Is-there-a-relationship-between-customer_rating-and-profit_margin_percentage?">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9867,7 +9867,7 @@ memory usage: 60.7 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="11.-Maak-nu-een-staafdiagram-van-de-gemiddelde-profit_margin_percentage-per-product_category">11. Maak nu een staafdiagram van de gemiddelde profit_margin_percentage per product_category<a class="anchor-link" href="#11.-Maak-nu-een-staafdiagram-van-de-gemiddelde-profit_margin_percentage-per-product_category">¶</a></h2>
+<h2 id="11.-Now-create-a-bar-chart-of-the-average-profit_margin_percentage-per-product_category.">11. Now create a bar chart of the average profit_margin_percentage per product_category.<a class="anchor-link" href="#11.-Now-create-a-bar-chart-of-the-average-profit_margin_percentage-per-product_category.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9957,7 +9957,7 @@ memory usage: 60.7 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="12.-Maak-een-nieuwe-kolom-discount_pct-aan-die-het-kortingspercentage-per-order-regel-berekent.">12. Maak een nieuwe kolom discount_pct aan die het kortingspercentage per order regel berekent.<a class="anchor-link" href="#12.-Maak-een-nieuwe-kolom-discount_pct-aan-die-het-kortingspercentage-per-order-regel-berekent.">¶</a></h2>
+<h2 id="12.-Create-a-new-discount_pct-column-that-calculates-the-discount-percentage-per-order-line.">12. Create a new discount_pct column that calculates the discount percentage per order line.<a class="anchor-link" href="#12.-Create-a-new-discount_pct-column-that-calculates-the-discount-percentage-per-order-line.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9982,7 +9982,7 @@ memory usage: 60.7 MB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="13.-Categoriseer-de-discount_pct-in-kortingscategorie%C3%ABn-(Geen-/-Lage-/-Gemiddelde-/-Hoge-korting)-en-tel-hoe-vaak-elke-categorie-voorkomt.">13. Categoriseer de discount_pct in kortingscategorieën (Geen / Lage / Gemiddelde / Hoge korting) en tel hoe vaak elke categorie voorkomt.<a class="anchor-link" href="#13.-Categoriseer-de-discount_pct-in-kortingscategorie%C3%ABn-(Geen-/-Lage-/-Gemiddelde-/-Hoge-korting)-en-tel-hoe-vaak-elke-categorie-voorkomt.">¶</a></h2>
+<h2 id="13.-Categorize-discount_pct-into-discount-categories-(None-/-Low-/-Average-/-High)-and-count-how-often-each-category-occurs.">13. Categorize discount_pct into discount categories (None / Low / Average / High) and count how often each category occurs.<a class="anchor-link" href="#13.-Categorize-discount_pct-into-discount-categories-(None-/-Low-/-Average-/-High)-and-count-how-often-each-category-occurs.">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9996,13 +9996,13 @@ memory usage: 60.7 MB
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">discount_category</span><span class="p">(</span><span class="n">pct</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">pct</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">'Geen korting'</span>
+        <span class="k">return</span> <span class="s1">'No discount'</span>
     <span class="k">elif</span> <span class="n">pct</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">'Lage korting'</span>
+        <span class="k">return</span> <span class="s1">'Low discount'</span>
     <span class="k">elif</span> <span class="n">pct</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">'Gemiddelde korting'</span>
+        <span class="k">return</span> <span class="s1">'Average discount'</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">'Hoge korting'</span>
+        <span class="k">return</span> <span class="s1">'High discount'</span>
 </pre></div>
 </div>
 </div>
@@ -10094,7 +10094,7 @@ memory usage: 60.7 MB
 <td>True</td>
 <td>11</td>
 <td>35.394278</td>
-<td>Hoge korting</td>
+<td>High discount</td>
 </tr>
 <tr>
 <th>1</th>
@@ -10118,7 +10118,7 @@ memory usage: 60.7 MB
 <td>True</td>
 <td>11</td>
 <td>46.302915</td>
-<td>Hoge korting</td>
+<td>High discount</td>
 </tr>
 <tr>
 <th>2</th>
@@ -10142,7 +10142,7 @@ memory usage: 60.7 MB
 <td>True</td>
 <td>6</td>
 <td>18.610968</td>
-<td>Gemiddelde korting</td>
+<td>Average discount</td>
 </tr>
 <tr>
 <th>3</th>
@@ -10166,7 +10166,7 @@ memory usage: 60.7 MB
 <td>True</td>
 <td>7</td>
 <td>9.793985</td>
-<td>Lage korting</td>
+<td>Low discount</td>
 </tr>
 <tr>
 <th>4</th>
@@ -10190,7 +10190,7 @@ memory usage: 60.7 MB
 <td>True</td>
 <td>8</td>
 <td>5.400239</td>
-<td>Lage korting</td>
+<td>Low discount</td>
 </tr>
 </tbody>
 </table>
@@ -10222,10 +10222,10 @@ memory usage: 60.7 MB
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>discount_category
-Gemiddelde korting    49198
-Hoge korting          36023
-Lage korting          35031
-Geen korting          17864
+Average discount    49198
+High discount       36023
+Low discount        35031
+No discount         17864
 Name: count, dtype: int64</pre>
 </div>
 </div>
@@ -10238,7 +10238,7 @@ Name: count, dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="14.-Tel-hoe-vaak-elke-betaalmethode-voorkomt-(payment_method).">14. Tel hoe vaak elke betaalmethode voorkomt (payment_method).<a class="anchor-link" href="#14.-Tel-hoe-vaak-elke-betaalmethode-voorkomt-(payment_method).">¶</a></h2>
+<h2 id="14.-Count-how-often-each-payment-method-occurs-(payment_method).">14. Count how often each payment method occurs (payment_method).<a class="anchor-link" href="#14.-Count-how-often-each-payment-method-occurs-(payment_method).">¶</a></h2>
 </div>
 </div>
 </div>
@@ -10283,7 +10283,7 @@ Name: count, dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Conclusie">Conclusie<a class="anchor-link" href="#Conclusie">¶</a></h2><p>Deze analyse van de e-commerce dataset laat een aantal duidelijke patronen zien. Kortingen worden veel toegepast, maar hoge kortingen (&gt;20%) zijn niet de norm — het merendeel van de orders valt in de categorie gemiddelde korting. De winstmarge verschilt sterk per productcategorie: Books &amp; Media blijft steken op zo'n 35%, terwijl Grocery boven de 50% marge uitkomt, wat aangeeft dat er ruimte is om de productmix te optimaliseren richting hoger-marge categorieën. Qua omzet springen Mobile App en Website er duidelijk bovenuit ten opzichte van Marketplace en Social Media, wat suggereert dat verdere investering in deze twee kanalen het meeste rendement oplevert. Opvallend is dat de klanttevredenheid (customer rating) vrijwel constant is over alle landen heen, wat wijst op een consistente productkwaliteit en klantervaring wereldwijd. Tot slot laat de tijdreeksanalyse een duidelijke piek in orders zien aan het einde van het jaar, gevolgd door een scherpe daling — dit verdient nader onderzoek om te bepalen of dit voorkomen kan worden of juist beter benut kan worden in de planning.</p>
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">¶</a></h2><p>This analysis of the e-commerce dataset reveals several clear patterns. Discounts are widely applied, but heavy discounts (&gt;20%) are not the norm — the majority of orders fall into the average discount category. Profit margin varies significantly by product category: Books &amp; Media hovers around 35%, while Grocery exceeds 50% margin, suggesting there is room to optimize the product mix toward higher-margin categories. In terms of revenue, Mobile App and Website clearly stand out compared to Marketplace and Social Media, suggesting further investment in these two channels would yield the most return. Notably, customer satisfaction (customer rating) is remarkably consistent across all countries, pointing to consistent product quality and customer experience worldwide. Finally, the time series analysis shows a clear spike in orders at the end of the year, followed by a sharp decline — this warrants further investigation to determine whether it can be prevented or better leveraged in planning.</p>
 </div>
 </div>
 </div>
