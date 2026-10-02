@@ -79,3 +79,8 @@ notebook, then:
 pip install pandas matplotlib jupyter
 jupyter notebook ecommerce.ipynb
 ```
+## Author
+Jordi van Sighem
+- 📧 jvsighem@gmail.com
+- 💼 [LinkedIn](https://www.linkedin.com/in/jordi-van-sighem-2953671a3)
+- 🌍 Rotterdam, Netherlands
