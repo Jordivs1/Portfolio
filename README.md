@@ -19,10 +19,10 @@ I use SQL and Python to explore datasets, identify patterns, visualize and extra
 | Project | Dataset | Description |
 |---|---|---|
 | [E-commerce Sales & Customer Analytics](Python/ecommerce) | Custom e-commerce dataset (138k orders, 397k order lines, 25k customers, 1.1k products) | Exploratory analysis of revenue, profit margin, discounting and customer satisfaction |
-| [RDW Vehicle Registration Data Pipeline](Python/rdw) | RDW Open Data API (Dutch vehicle registration data) | ETL pipeline pulling live vehicle registration and fuel-type data to analyze admissions, fuel mix, load capacity and fleet age |
+| [RDW Vehicle Registration Data Pipeline](Python/rdw_API) | RDW Open Data API (Dutch vehicle registration data) | ETL pipeline pulling live vehicle registration and fuel-type data to analyze admissions, fuel mix, load capacity and fleet age |
 
 
 ## Contact
 - 📧 jvsighem@gmail.com
-- 💼 [LinkedIn] (https://www.linkedin.com/in/jordi-van-sighem-2953671a3)
+- 💼 [LinkedIn](https://www.linkedin.com/in/jordi-van-sighem-2953671a3)
 - 🌍 Rotterdam, Netherlands
