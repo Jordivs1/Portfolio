@@ -24,5 +24,5 @@ I use SQL and Python to explore datasets, identify patterns, visualize and extra
 
 ## Contact
 - 📧 jvsighem@gmail.com
-- 💼 [LinkedIn](www.linkedin.com/in/jordi-van-sighem)
+- 💼 [LinkedIn] (https://www.linkedin.com/in/jordi-van-sighem-2953671a3)
 - 🌍 Rotterdam, Netherlands
