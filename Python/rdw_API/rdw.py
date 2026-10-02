@@ -73,7 +73,6 @@ def clean_fuel_data(df):
     df['brandstof_omschrijving'] = df['brandstof_omschrijving'].astype(str) # Convert the 'brandstof_omschrijving' column to string type
     df['brandstof_omschrijving'] = df['brandstof_omschrijving'].str.strip() # Remove leading and trailing whitespace from the 'brandstof_omschrijving' column
     return df
-
 kentekens = rdw_license_data['kenteken'].unique().tolist()
 rdw_fuel_data = get_fuel_data(3000, kentekens)
 rdw_fuel_data = clean_fuel_data(rdw_fuel_data)
