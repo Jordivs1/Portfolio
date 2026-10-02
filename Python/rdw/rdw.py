@@ -5,7 +5,6 @@ from pathlib import Path
 ## Data from the RDW API for license data
 
 def get_license_data(limit):
-     steps=500
      steps = 500
      datalist = []
      for data in range(0, limit, steps):
@@ -59,14 +58,14 @@ def clean_license_data(df):
     df['laadvermogen'] = df['laadvermogen'].astype(float) # Convert the 'laadvermogen' column to float, coercing errors to NaN
     return df
 
-
 rdw_license_data = clean_license_data(rdw_license_data)
 
 def most_admitted_brands_per_year(df):
     most_admitted_brands = df.groupby('toelating_jaar')['merk'].value_counts() # Group the data by 'toelating_jaar' and 'merk', and count the occurrences of each combination
     return most_admitted_brands.groupby('toelating_jaar').head(1) # Return the most admitted brands per year
 
-print(most_admitted_brands_per_year(rdw_license_data)) # Print the most admitted brands per year
+most_admitted_brands_per_year_df = most_admitted_brands_per_year(rdw_license_data)
+most_admitted_brands_per_year_df.to_csv('./output/most_admitted_brands_per_year.csv', index=True, encoding='utf-8')
 
 ## 2. How has the fuel mix of newly admitted vehicles developed over the years? — requires linking with the fuel table.
 def clean_fuel_data(df):
@@ -84,19 +83,19 @@ def fuel_mix_over_years(df_license, df_fuel):
     fuel_mix = merged_df.groupby(['toelating_jaar', 'brandstof_omschrijving']).size().unstack(fill_value=0)
     return fuel_mix
 
-print(fuel_mix_over_years(rdw_license_data, rdw_fuel_data)) # Print the fuel mix over the years
+fuel_mix_over_years_df = fuel_mix_over_years(rdw_license_data, rdw_fuel_data)
+fuel_mix_over_years_df.to_csv('./output/fuel_mix_over_years.csv', index=True, encoding='utf-8')
 
 ## 3. What is the average load capacity (laadvermogen) per vehicle type, and which vehicle types are admitted most? 
 def average_load_capacity_per_vehicle_type(df):
     grouped_data = df.groupby('voertuigsoort')['laadvermogen'].mean().reset_index() # Group the data by 'voertuigsoort' and calculate the mean of 'laadvermogen'
     return grouped_data
 
-print(average_load_capacity_per_vehicle_type(rdw_license_data)) # Print the grouped data with average 'laadvermogen' per 'voertuigsoort'
 print(rdw_license_data['voertuigsoort'].value_counts()) # Print the count of each 'voertuigsoort' to see which vehicle types are most admitted
 
 average_load_capacity_df = average_load_capacity_per_vehicle_type(rdw_license_data)
 
-average_load_capacity_df.to_csv('./output/average_load_capacity_per_vehicle_type', index=False, encoding='utf-8')
+average_load_capacity_df.to_csv('./output/average_load_capacity_per_vehicle_type.csv', index=False, encoding='utf-8')
 
 
 ## 4. How many vehicles are exported each year, compared to the number of new admissions per year? 
@@ -106,6 +105,7 @@ def count_exported_vehicles_per_year(df):
     return yearly_export
 
 yearly_export = count_exported_vehicles_per_year(rdw_license_data)
+yearly_export.to_csv('./output/count_exported_vehicles_per_year.csv', index=False, encoding='utf-8')
 
 def count_new_admissions_per_year(df):
     yearly_new_admissions = df.groupby(df['datum_eerste_toelating'].dt.year)['kenteken'].count().reset_index() # Group the data by year and count the number of new admissions per year
@@ -114,10 +114,14 @@ def count_new_admissions_per_year(df):
 merged_yearly_data = pd.merge(yearly_export, count_new_admissions_per_year(rdw_license_data), how='inner', left_on='datum_eerste_toelating', right_on='datum_eerste_toelating') # Merge the yearly export and new admissions data on the year
 print(merged_yearly_data.head()) # Print the merged yearly data with both exported and new admissions per year
 
+count_new_admissions_per_year_df = count_new_admissions_per_year(rdw_license_data)
+count_new_admissions_per_year_df.to_csv('./output/count_new_admissions_per_year.csv', index=False, encoding='utf-8')
+
 ## 5. What is the average "age" of the current vehicle fleet per vehicle type? — uses datum_eerste_toelating and voertuigsoort, compared to the current date.
 def avg_age_per_vehicle_type(df):
     df['age_days'] = (pd.Timestamp.now() - df['datum_eerste_toelating']).dt.days # Calculate the age in days for each vehicle by subtracting 'datum_eerste_toelating' from the current date
     average_age = df.groupby('voertuigsoort')['age_days'].mean().reset_index(name='average_age_days') # Group the data by 'voertuigsoort' and calculate the average age in days
     return average_age
 
-print(avg_age_per_vehicle_type(rdw_license_data)) # Print the average age per vehicle type
+avg_age_per_vehicle_type_df = avg_age_per_vehicle_type(rdw_license_data)
+avg_age_per_vehicle_type_df.to_csv('./output/avg_age_per_vehicle_type.csv', index=False, encoding='utf-8')
